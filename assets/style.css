@@ -6,12 +6,14 @@
 
 body {
   margin: 0;
-  background-image: url("http://www.desktopwallpaperhd.net/wallpapers/18/d/andromeda-space-background-computer-images-187549.jpg");
-  background-attachment: fixed;
+  /*background-image: url("http://www.desktopwallpaperhd.net/wallpapers/18/d/andromeda-space-background-computer-images-187549.jpg");
+  background-attachment: fixed;*/
+  width: 100%;
   background-size: cover;
+  background: #121212;
 }
 
-h1 {
+h1.heading1 {
   margin: 0 0 30px 0;
   padding: 20px;
   background-color: rgba(20, 20, 20, 0.9);
@@ -35,7 +37,7 @@ h1 {
   height: 100%;
   transform-style: preserve-3d;
   transform: rotateY(-360deg) translateZ(-412px); /* add reverse transformation from the slides */
-  animation: swirl 40s steps(10000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
+  animation: swirl 20s steps(10000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
 }
 
 .slide {
@@ -119,5 +121,53 @@ Simply rotates the carousel around the Y axis by using rotateY and starting at i
   }
   to {
     transform: rotateY(0deg);
+  }
+}
+@media (max-width: 1024px) {
+  .carousel_wrapper {
+    transform: scale(0.9);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 930px) {
+  .carousel_wrapper {
+    transform: scale(0.8);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 845px) {
+  .carousel_wrapper {
+    transform: scale(0.7);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 730px) {
+  .carousel_wrapper {
+    transform: scale(0.6);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 640px) {
+  .carousel_wrapper {
+    transform: scale(0.5);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 520px) {
+  .carousel_wrapper {
+    transform: scale(0.4);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 375px) {
+  .carousel_wrapper {
+    transform: scale(0.3);
+    transform-origin: auto 0;
+  }
+}
+@media (max-width: 280px) {
+  .carousel_wrapper {
+    transform: scale(0.2);
+    transform-origin: auto 0;
   }
 }
